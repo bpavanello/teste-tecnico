@@ -1,0 +1,47 @@
+.drop-container
+    position: relative
+    height: 50px
+    width: 180px
+    background-color: #fff
+    border: 1px solid #EDEDED
+    border-radius: 10px
+    .drop-input
+        display: flex
+        flex-direction: column
+        padding: 8px 16px
+        label
+            font-size: 10px
+            color: #0A4A5B
+            font-weight: bold
+        button
+            width: 100%
+            background-color: transparent
+            border: 0 none
+            outline: 0 none
+            text-align: left
+            padding: 0
+    button:active
+        .drop-options
+            display: block
+    .drop-options
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        background-color: #FFF
+        width: 180px
+        border-radius: 10px
+        ul
+            padding: 5px 10px
+            margin: 0
+            li
+                padding: 5px 0
+                list-style: none
+                white-space: nowrap
+                button
+                    width: 100%
+                    padding: 8px
+                button:hover
+                    background-color: #EDEDED
+    .hidden
+        display: none

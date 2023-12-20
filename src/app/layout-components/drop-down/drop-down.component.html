@@ -1,0 +1,12 @@
+<div class="drop-container">
+    <div class="drop-input">
+        <label>Tipo: </label>
+        <button type="button" (click)="toggleOptions()">{{ selectedText }}</button>
+        <div class="drop-options" [ngClass]="{'hidden': !visible}">
+            <ul>
+                <li *ngFor="let option of options"><button type="button" (click)="selectOption(option)">{{ option }}</button></li>
+            </ul>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+<section>
+    <div class="search-bar">
+        <div>
+            <app-drop-down [options]="searchOptions" (selectedOption)="changeOption($event)"></app-drop-down>
+            <span class="input-search">
+                <label for="search">Filtrar:</label>
+                <input type="text" name="search" id="search" [(ngModel)]="searchInfo">
+            </span>
+        </div>
+        <div>
+            <button type="button" (click)="EditCustomer()">Editar</button>
+            <button type="button" (click)="RemoveCustomer()">Remover</button>
+        </div>
+    </div>
+
+    <div class="d-table">
+        <header>
+            <div class="col"><input type="radio" disabled></div>
+            <div class="col">Nome</div>
+            <div class="col">CPF</div>
+            <div class="col">Data de nascimento</div>
+            <div class="col">Renda mensal</div>
+            <div class="col">E-mail</div>
+            <div class="col">Data de registro</div>
+        </header>
+        <div class="row" *ngFor="let customer of customers | async | custmerFilter: searchInfo : searchOption">
+            <div class="col"><input type="radio" name="selection" value="customer.id" (change)="selectChange(customer.id!)"></div>
+            <div class="col">{{ customer.customerName }} {{ customer.customerSurname }}</div>
+            <div class="col">{{ customer.customerDocument | CPF }}</div>
+            <div class="col">{{ customer.customerBirth | BrDate }}</div>
+            <div class="col">{{ customer.incomeMonthly | currency: 'BRL' }}</div>
+            <div class="col">{{ customer.customerEmail }}</div>
+            <div class="col">{{ customer.registrationDate! | BrDate }}</div>
+        </div>
+    </div>
+</section>

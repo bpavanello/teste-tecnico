@@ -1,0 +1,44 @@
+{
+  "customerRecord": [
+    {
+      "customerName": "Jorge",
+      "customerSurname": "da Silva",
+      "customerDocument": "22222222222",
+      "customerBirth": "10102000",
+      "customerEmail": "jorge.silva@email.com",
+      "incomeMonthly": "3000",
+      "registrationDate": "20122023",
+      "id": 1
+    },
+    {
+      "customerName": "Pedro",
+      "customerSurname": "Eugenio",
+      "customerDocument": "22222222222",
+      "customerBirth": "05062001",
+      "customerEmail": "pedro.eugenio@email.com",
+      "incomeMonthly": "2000",
+      "registrationDate": "20122023",
+      "id": 2
+    },
+    {
+      "customerName": "Carlos",
+      "customerSurname": "Magnolio",
+      "customerDocument": "22222222222",
+      "customerBirth": "05062000",
+      "customerEmail": "pedro.eugenio@email.com",
+      "incomeMonthly": "2000",
+      "registrationDate": "20122023",
+      "id": 3
+    },
+    {
+      "customerName": "Simone",
+      "customerSurname": "Veiga",
+      "customerDocument": "22233344423",
+      "customerBirth": "05021980",
+      "customerEmail": "simone.veiga@email.com",
+      "incomeMonthly": "3500",
+      "registrationDate": "20112023",
+      "id": 4
+    }
+  ]
+}

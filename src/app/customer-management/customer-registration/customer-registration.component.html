@@ -1,0 +1,61 @@
+<div>
+    <form [formGroup]="form" id="RegisterForm" name="RegisterForm">
+        <div>
+            <span class="custom-input">
+                <label>Nome: </label>
+                <input type="text" name="name" formControlName="name">
+            </span>
+            <span class="custom-input">
+                <label>Sobrenome: </label>
+                <input type="text" name="surname" formControlName="surname">
+            </span>
+
+            <span class="warning" *ngIf="this.form.controls.name.dirty && !this.form.controls.name.valid || this.form.controls.surname.dirty && !this.form.controls.surname.valid">
+                <p>Preencha os campos nome e sobrenome</p>
+            </span>
+        </div>
+        <div>
+            <span class="custom-input">
+                <label>CPF:</label>
+                <input type="text" name="document" formControlName="document" mask="000.000.000-00">
+            </span>
+
+            <span class="warning" *ngIf="this.form.controls.document.dirty && !this.form.controls.document.valid">
+                <p>Digite um CPF válido</p>
+            </span>
+        </div>
+        <div>
+            <span class="custom-input">
+                <label>Data de Nascimento</label>
+                <input type="text" name="birthDate" formControlName="birthDate" mask="00/00/0000">
+            </span>
+
+            <span class="warning" *ngIf="this.form.controls.birthDate.dirty && !this.form.controls.birthDate.valid">
+                <p>Digite uma data válida</p>
+            </span>
+        </div>
+        <div>
+            <span class="custom-input">
+                <label>Renda Mensal</label>
+                <input type="text" name="incomeMonthly" formControlName="incomeMonthly" prefix="R$ " mask="0*,00">
+            </span>
+
+            <span class="warning" *ngIf="this.form.controls.incomeMonthly.dirty && !this.form.controls.incomeMonthly.valid">
+                <p>Campo não preenchido ou valor inválido</p>
+            </span>
+        </div>
+        <div>
+            <span class="custom-input">
+                <label>Email</label>
+                <input type="email" name="email" formControlName="email">
+            </span>
+
+            <span class="warning" *ngIf="this.form.controls.email.dirty && !this.form.controls.email.valid">
+                <p>Campo não preenchido ou valor inválido</p>
+            </span>
+        </div>
+        <div class="submit-button">
+            <button type="button" (click)="submitForm()">{{ submitButtonText }}</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,9 @@
+<div class="custumers-header">
+    <h2>Gestão de Clientes</h2>
+    <div class="tab-menu">
+        <button [ngClass]="{'active': activeMenu == 'lista'}" type="button" (click)="navigateTo('lista')">Gestão</button>
+        <button [ngClass]="{'active': activeMenu == 'cadastro'}"type="button" (click)="navigateTo('cadastro')">Cadastro</button>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
